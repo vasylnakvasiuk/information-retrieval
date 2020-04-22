@@ -24,7 +24,7 @@ def convert_text_to_terms(text):
     return words
 
 def main():
-    for dirpath, _, fnames in os.walk("./samples/"):
+    for dirpath, _, fnames in os.walk("../samples"):
         for fname in fnames:
             abspath = os.path.join(dirpath, fname)
             with open(abspath) as f:
@@ -33,10 +33,10 @@ def main():
                     words_in_file.extend(convert_text_to_terms(line))
 
                 save_words_to_binary_file(
-                    words_in_file, 'results/resul-{}.pickle'.format(fname)
+                    words_in_file, '../results/result-{}.pickle'.format(fname)
                 )
                 save_words_to_csv_file(
-                    words_in_file, 'results/result-{}.csv'.format(fname)
+                    words_in_file, '../results/result-{}.csv'.format(fname)
                 )
                 print(
                     'Words dict of file "{}" has {} words and {} bytes.'.format(
