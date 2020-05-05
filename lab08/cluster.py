@@ -1,7 +1,7 @@
 import random
 import operator
 
-import similarity_centroid_helper
+import helpers
 
 document_vector_matrix_file = open('input/document_vector_matrix.txt', 'r')
 urls_file = open('input/urls.txt', 'r')
